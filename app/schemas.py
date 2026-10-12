@@ -51,3 +51,25 @@ class EventRequestResponse(BaseModel):
     expected_benefit: str
     supporting_document: str | None = None
     status: str
+
+from typing import Literal
+
+
+class ProctorAssignmentCreate(BaseModel):
+    proctor_id: str
+
+
+class ProctorReviewCreate(BaseModel):
+    proctor_id: str
+    recommendation: Literal[
+        "RecommendApproval",
+        "RecommendRejection",
+        "Return",
+    ]
+    remarks: str | None = None
+
+
+class FinalDecisionCreate(BaseModel):
+    incharge_id: str
+    decision: Literal["Approved", "Rejected"]
+    reason: str | None = None
