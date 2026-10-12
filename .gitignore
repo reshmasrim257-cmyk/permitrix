@@ -1,8 +1,18 @@
+# Python
 .env
 .venv/
 venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Node.js
+node_modules/
+dist/
+
+# Editors
 .idea/
 .vscode/
+
+# Environment and logs
+*.log
